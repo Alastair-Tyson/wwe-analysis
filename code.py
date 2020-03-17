@@ -34,6 +34,7 @@ dance=[]
 energy=[]
 loud=[]
 speech=[]
+valence=[
 acoustic=[]
 instru=[]
 live=[]
@@ -48,6 +49,7 @@ for track in range(len(track_ids)):
     acoustic.append(af['acousticness'])
     instru.append(af['instrumentalness'])
     live.append(af['liveness'])
+    valence.append(af['valence'])
     tempo.append(af['tempo'])
 
 df=pd.DataFrame()
@@ -57,6 +59,7 @@ df['danceability']=dance
 df['energy']=energy
 df['loudness']=loud
 df['speechiness']=speech
+df['valence']=valence
 df['acousticness']=acoustic
 df['instrumentalness']=instru
 df['liveness']=live
